@@ -347,9 +347,19 @@ int main(int argc, char** argv)
                                 }
                               }
                               Value = Value/ 144; // Divide by pixels    thought 12*12 = 144, counting revealed it is 13*13 = 169
-                              cout << "Intensity = " << endl << " " << Value <<endl;
-
-
+                
+                              double DistVal = pow((3844.2/Value),(1/0.932)); // Distance cal, using equation for data set
+                
+                               cout << "Intensity = " << endl << " " << Value <<
+                               endl << "Distance = " << DistVal <<
+                               endl << "X=" << X << "    Y=" << Y << endl; // << "count:" << counting << endl;
+                
+                                // Display calulated distance on dispcopy winow
+                                char buffer[50];
+                                sprintf(buffer, "%1.1f cm", DistVal);
+                                putText(disp8copy, "Distance =", Point(10, 30), FONT_HERSHEY_SIMPLEX, 1, Scalar(200));
+                                putText(disp8copy, buffer, Point(10, 100), FONT_HERSHEY_SIMPLEX, 1, Scalar(200));
+                                 imshow("dispCopy", dispCopy);
 
             }
         } // end video loop
