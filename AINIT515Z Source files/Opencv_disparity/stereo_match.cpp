@@ -359,7 +359,7 @@ int main(int argc, char** argv)
                                 sprintf(buffer, "%1.1f cm", DistVal);
                                 putText(disp8copy, "Distance =", Point(10, 30), FONT_HERSHEY_SIMPLEX, 1, Scalar(200));
                                 putText(disp8copy, buffer, Point(10, 100), FONT_HERSHEY_SIMPLEX, 1, Scalar(200));
-                                 imshow("dispCopy", dispCopy);
+                                 imshow("disp8copy", disp8copy);
 
             }
         } // end video loop
