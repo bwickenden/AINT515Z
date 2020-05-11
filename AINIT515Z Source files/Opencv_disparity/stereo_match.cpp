@@ -354,6 +354,8 @@ int main(int argc, char** argv)
                                endl << "Distance = " << DistVal <<
                                endl << "X=" << X << "    Y=" << Y << endl; // << "count:" << counting << endl;
                 
+                
+                // Debug---> if this doesn't work, change disp8copy to dispCopy
                                 // Display calulated distance on dispcopy winow
                                 char buffer[50];
                                 sprintf(buffer, "%1.1f cm", DistVal);
